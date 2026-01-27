@@ -1,0 +1,6 @@
+@team_collab_crm_HostAddress = http://localhost:5283
+
+GET {{team_collab_crm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
