@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using team_collab_crm.Interfaces;
 
 namespace team_collab_crm.Models
 {
-    public class OrganizationModel : AuditedModelBase
+    public class OrganizationModel : AuditedModelBase, ISoftDelete
     {
         [MaxLength(255)]
         public string Name { get; set; } = null!;

@@ -1,12 +1,13 @@
-﻿using team_collab_crm.Services;
+﻿using team_collab_crm.Interfaces;
+using team_collab_crm.Services;
 
 namespace team_collab_crm.Models
 {
-    public class TaskEntity : OrgScopedModelBase
+    public class TaskEntity : OrgScopedModelBase, ISoftDelete
     {
         public Enums.EntityType EntityType { get; set; }
         public Guid EntityId { get; set; }
-        public string Title { get; set; }
+        public string Title { get; set; } = null!;
         public string? Description { get; set; }
         public DateTimeOffset? DueAt { get; set; }
         public Enums.TaskStatus Status { get; set; } = Enums.TaskStatus.OPEN;

@@ -5,7 +5,7 @@ namespace team_collab_crm.Models
 {
     public class Attachment : BaseModel
     {
-        public Guid Orgid { get; set; }
+        public Guid OrgId { get; set; }
         public EntityType EntityType { get; set; }
         public Guid EntityId { get; set; }
         public Guid? UploadedBy { get; set; }

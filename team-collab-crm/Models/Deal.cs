@@ -4,7 +4,7 @@ using static team_collab_crm.Services.Enums;
 
 namespace team_collab_crm.Models
 {
-    public class Deal : OrgScopedModelBase
+    public class Deal : OrgScopedModelBase, ISoftDelete
     {
         public Guid? AccountId { get; set; }
         public Account? Account { get; set; }

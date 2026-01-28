@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using team_collab_crm.Interfaces;
 
 namespace team_collab_crm.Models
 {
-    public class Account : OrgScopedModelBase
+    public class Account : OrgScopedModelBase, ISoftDelete
     {
         [MaxLength(200)]
-        public string name { get; set; } = null!;
+        public string Name { get; set; } = null!;
         [MaxLength(255)]
         public string? Domain { get; set; }
         [MaxLength(120)]

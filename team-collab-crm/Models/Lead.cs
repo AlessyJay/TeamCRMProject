@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using team_collab_crm.Interfaces;
 using static team_collab_crm.Services.Enums;
 
 namespace team_collab_crm.Models
 {
-    public class Lead : OrgScopedModelBase
+    public class Lead : OrgScopedModelBase, ISoftDelete
     {
         [MaxLength(200)]
         public string Name { get; set; } = null!;

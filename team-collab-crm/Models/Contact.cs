@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using team_collab_crm.Interfaces;
 
 namespace team_collab_crm.Models
 {
-    public class Contact : OrgScopedModelBase
+    public class Contact : OrgScopedModelBase, ISoftDelete
     {
         public Guid? AccountId { get; set; }
         public Account? Account { get; set; }
